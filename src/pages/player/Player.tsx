@@ -14,7 +14,7 @@ const ZONE_COLORS = ['#3b82f6', '#22c55e', '#f59e0b', '#a855f7'];
 export function Player() {
   const navigate = useNavigate();
   const { status, programs } = useMQTT();
-  const { togglePause, stopManual } = useIrrigation();
+  const { togglePause, cancelProgram } = useIrrigation();
   const [confirmStop, setConfirmStop] = useState(false);
 
   // Si no hay riego activo, volver al home
@@ -97,7 +97,7 @@ export function Player() {
           title="¿Detener riego?"
           body="Se interrumpirá el programa en curso."
           confirmLabel="Detener"
-          onConfirm={() => { setConfirmStop(false); stopManual(); navigate('/'); }}
+          onConfirm={() => { setConfirmStop(false); cancelProgram(); navigate('/'); }}
           onCancel={() => setConfirmStop(false)}
         />
       )}

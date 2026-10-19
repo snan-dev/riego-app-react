@@ -3,10 +3,10 @@
 // ═══════════════════════════════════════════════════
 
 export const MQTT_CONFIG = {
-  host:     '8102444dc84b4a3cbdc8bef567d51698.s1.eu.hivemq.cloud',
-  port:     8884,
-  username: 'espRiego',
-  password: 'Riego1234',
+  host:     'v01204cf.ala.us-east-1.emqxsl.com',
+  port:     8084,
+  username: 'app-riego',
+  password: '310592',
   clientId: 'web-riego-' + Math.random().toString(16).slice(2, 10),
 } as const;
 
